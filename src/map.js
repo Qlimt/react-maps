@@ -34,7 +34,8 @@ var Map = React.createClass({
 
     var markers = this.state.markers;
     var map = this.state.map;
-    
+    var icon = this.props.markerIcon;
+
     // map may not be loaded when parent component re-renders
     if(map === null) { return false; }
     
@@ -53,7 +54,8 @@ var Map = React.createClass({
       var marker = new google.maps.Marker({
         position: location,
         map: map,
-        title: point.label
+        title: point.label,
+        icon: icon
       });
 
       markers.push( marker );
