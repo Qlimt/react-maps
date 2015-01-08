@@ -3,11 +3,7 @@
  */
 "use strict";
 
-var __in_node = (typeof exports !== 'undefined' && this.exports !== exports);
-
-if( __in_node ) {
-  var React = require('react');
-}
+var React = require('react');
 
 var Map = React.createClass({
 
@@ -123,6 +119,4 @@ var Map = React.createClass({
 
 });
 
-if( __in_node ) {
-  module.exports = Map;
-}
+module.exports = Map;
