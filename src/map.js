@@ -69,11 +69,13 @@ var Map = React.createClass({
 
     var style = {
       width: this.props.width,
-      height: this.props.height
+      height: this.props.height,
+      paddingTop: this.props.height/2,
+      textAlign: 'center'
     }
 
     return (
-      React.DOM.div({style:style})
+      React.DOM.div({style:style, className: 'react-map'}, "Loading map..")
     );
   },
 
