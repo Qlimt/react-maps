@@ -4,6 +4,7 @@
 "use strict";
 
 var React = require('react');
+var { canUseDOM } = require('react/lib/ExecutionEnvironment');
 
 var Map = React.createClass({
 
@@ -80,6 +81,8 @@ var Map = React.createClass({
   },
 
   componentDidMount : function() {
+    if (!canUseDOM) return;  // Not rendering map if server-side
+
     var createMap = (function() {
       var mapOptions = {
         zoom: this.props.zoom,
